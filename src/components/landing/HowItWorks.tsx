@@ -27,33 +27,42 @@ const steps = [
 
 export const HowItWorks = () => {
   return (
-    <section className="py-20 px-4 bg-background">
+    <section className="py-24 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-[#F9F6EE] text-[#36454F]">
           Simple, 3 Step Process
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step) => {
             const Icon = step.icon;
             return (
               <div
                 key={step.title}
-                className="relative bg-[#F1F0FB] dark:bg-[#222222] border-border text-card-foreground hover:shadow-xl transition-shadow duration-300 group rounded-[24px] p-6"
+                className="relative bg-[#F1F0FB] dark:bg-[#222222] border-border rounded-2xl p-8 hover:shadow-xl transition-all duration-300 group"
               >
-                <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-muted dark:text-[#F0EAD6] text-[#36454F] flex items-center justify-center font-bold">
+                {/* Number Badge */}
+                <div className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-white dark:bg-[#333333] shadow-lg flex items-center justify-center font-bold text-lg dark:text-[#F0EAD6] text-[#36454F]">
                   {step.number}
                 </div>
-                <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br ${step.iconColor} flex items-center justify-center relative`}>
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br opacity-50 blur-lg animate-pulse" style={{ background: `linear-gradient(135deg, ${step.iconColor})` }} />
-                  <Icon className="w-8 h-8 text-background relative z-10" />
+
+                {/* Icon Container */}
+                <div className="mb-6">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${step.iconColor} flex items-center justify-center relative group-hover:scale-105 transition-transform duration-300`}>
+                    <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${step.iconColor} opacity-50 blur-lg group-hover:opacity-70 transition-opacity duration-300`} />
+                    <Icon className="w-8 h-8 text-white relative z-10" />
+                  </div>
                 </div>
-                <h3 className="text-xl text-center mb-2 dark:text-[#F0EAD6] text-[#36454F]">
-                  {step.title}
-                </h3>
-                <p className="dark:text-[#E2DFD2] text-[#36454F]">
-                  {step.description}
-                </p>
+
+                {/* Content */}
+                <div className="space-y-3">
+                  <h3 className="text-xl font-semibold dark:text-[#F0EAD6] text-[#36454F] leading-tight">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm dark:text-[#E2DFD2] text-[#36454F] leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
             );
           })}
