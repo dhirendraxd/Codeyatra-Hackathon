@@ -9,6 +9,7 @@ import Employee from "./pages/Employee";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import CreateAssessment from "./pages/CreateAssessment";
+import { UploadAssessmentPage } from "@/pages/UploadAssessmentPage";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/auth" element={<Auth />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/create-assessment" element={<CreateAssessment />} />
+            <Route path="/upload-assessment" element={<UploadAssessmentPage />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
