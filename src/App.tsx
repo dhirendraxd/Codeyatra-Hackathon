@@ -9,6 +9,8 @@ import Employee from "./pages/Employee";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import CreateAssessment from "./pages/CreateAssessment";
+import CreateEmployerAssessment from "@/pages/CreateEmployerAssessment";
+import ViewGeneratedAssessment from "@/pages/ViewGeneratedAssessment";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,8 @@ const App = () => (
             <Route path="/auth" element={<Auth />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/create-assessment" element={<CreateAssessment />} />
+            <Route path="/create-employer-assessment" element={<CreateEmployerAssessment />} />
+            <Route path="/view-generated-assessment" element={<ViewGeneratedAssessment />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

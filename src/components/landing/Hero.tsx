@@ -25,6 +25,22 @@ export const Hero = () => {
     navigate("/create-assessment");
   };
 
+  const handleEmployerAssessment = async () => {
+    const { data: { session } } = await supabase.auth.getSession();
+    
+    if (!session) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to create an employer assessment",
+        variant: "destructive"
+      });
+      navigate("/auth");
+      return;
+    }
+
+    navigate("/create-employer-assessment");
+  };
+
   return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4 relative overflow-hidden dark:bg-background bg-white">
       <div className="relative z-10 max-w-7xl mx-auto w-full pt-24">
@@ -47,7 +63,14 @@ export const Hero = () => {
                 className="bg-[#006BFF] hover:bg-[#0055CC] text-white font-semibold shadow-lg whitespace-nowrap h-12"
                 onClick={handleCreateAssessment}
               >
-                Create Assessment
+                Give Assessment
+              </Button>
+              <Button 
+                size="lg" 
+                className="bg-[#22C55E] hover:bg-[#16A34A] text-white font-semibold shadow-lg whitespace-nowrap h-12"
+                onClick={handleEmployerAssessment}
+              >
+                Create Job Assessment
               </Button>
             </div>
           </div>

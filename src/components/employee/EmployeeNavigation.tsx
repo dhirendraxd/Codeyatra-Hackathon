@@ -59,10 +59,10 @@ export const EmployeeNavigation = () => {
           
           <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
             <Link to="/jobs" className="dark:text-[#F0EAD6] text-[#36454F] font-medium hover:opacity-80 transition-opacity">
-              All Jobs
+              
             </Link>
             <Link to="/companies" className="dark:text-[#F0EAD6] text-[#36454F] font-medium hover:opacity-80 transition-opacity">
-              All Companies
+              
             </Link>
           </div>
 

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -27,7 +26,6 @@ import {
 
 const formSchema = z.object({
   topic: z.string().min(1, "Please enter a topic"),
-  companyName: z.string().min(1, "Please enter your company name"),
   jobTitle: z.string().min(1, "Please enter the job title"),
   assessmentType: z.string().min(1, "Please select an assessment type"),
   workMode: z.string().min(1, "Please select a work mode"),
@@ -66,7 +64,6 @@ export const AssessmentForm = ({
     resolver: zodResolver(formSchema),
     defaultValues: {
       topic: topic,
-      companyName: "",
       jobTitle: "",
       assessmentType: "technical",
       workMode: "on_site",
@@ -109,7 +106,6 @@ export const AssessmentForm = ({
           topic: values.topic,
           questions,
           user_id: session.user.id,
-          company_name: values.companyName,
           job_title: values.jobTitle,
           assessment_type: values.assessmentType,
           remote_work_type: values.workMode,
@@ -140,19 +136,6 @@ export const AssessmentForm = ({
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleCreateAssessment)} className="space-y-6">
-        <FormField
-          control={form.control}
-          name="companyName"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Company Name</FormLabel>
-              <FormControl>
-                <Input placeholder="Enter your company name" {...field} />
-              </FormControl>
-            </FormItem>
-          )}
-        />
-
         <FormField
           control={form.control}
           name="jobTitle"

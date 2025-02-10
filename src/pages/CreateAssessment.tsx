@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -102,7 +101,7 @@ const CreateAssessment = () => {
         )}
 
         <h1 className="text-3xl font-bold mb-8 text-center dark:text-[#F9F6EE] text-[#36454F]">
-          {questions.length ? 'Assessment Questions' : 'Technical Assessment'}
+          {questions.length ? 'Assessment Questions' : 'AI Made Assessment'}
         </h1>
         
         {!questions.length ? (
