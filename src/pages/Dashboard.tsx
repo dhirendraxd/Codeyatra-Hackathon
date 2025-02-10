@@ -1,14 +1,16 @@
-
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { User } from "@supabase/supabase-js";
-import { LogOut, Home } from "lucide-react";
+import { LogOut, Home, Leaf, Plus } from "lucide-react";
 import { ProfileSection } from "@/components/dashboard/ProfileSection";
 import { AssessmentStats } from "@/components/dashboard/AssessmentStats";
 import { AssessmentTable } from "@/components/dashboard/AssessmentTable";
+import { RecentActivity } from "@/components/dashboard/RecentActivity";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const Dashboard = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -49,8 +51,7 @@ const Dashboard = () => {
 
   const handleSignOut = async () => {
     try {
-      const { error } = await supabase.auth.signOut();
-      if (error) throw error;
+      await supabase.auth.signOut();
       navigate("/");
     } catch (error: any) {
       toast({
@@ -63,66 +64,87 @@ const Dashboard = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <p className="text-foreground">Loading...</p>
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary" />
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-background">
-      <nav className="border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-4">
-              <h1 className="text-2xl font-bold text-foreground">Dashboard</h1>
-              <Button variant="ghost" asChild>
-                <Link to="/">
-                  <Home className="h-5 w-5 mr-2" />
-                  Home
-                </Link>
+      <header className="border-b bg-card">
+        <div className="container flex h-16 items-center justify-between py-4">
+          <div className="flex items-center gap-4">
+            <Link to="/">
+              <Button variant="ghost" size="icon">
+                <Home className="h-5 w-5" />
               </Button>
+            </Link>
+            <div className="flex items-center gap-3">
+              <h1 className="text-xl font-bold">SDG Assessment Dashboard</h1>
+              <Badge variant="secondary" className="bg-primary/10 text-primary">
+                <Leaf className="h-3 w-3 mr-1" />
+                Sustainable Development
+              </Badge>
             </div>
-            <Button variant="ghost" onClick={handleSignOut}>
-              <LogOut className="h-5 w-5 mr-2" />
-              Sign Out
+          </div>
+          <div className="flex items-center gap-4">
+            <Button variant="outline" className="gap-2" asChild>
+              <Link to="/create-assessment">
+                <Plus className="h-4 w-4" />
+                New Assessment
+              </Link>
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleSignOut}
+              className="text-destructive hover:text-destructive hover:bg-destructive/10"
+            >
+              <LogOut className="h-5 w-5" />
             </Button>
           </div>
         </div>
-      </nav>
+      </header>
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="space-y-8">
+      <main className="container py-8 space-y-8">
+        <div className="grid gap-6 md:grid-cols-[2fr_1fr]">
           {user && <ProfileSection user={user} />}
-          
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-foreground">Overview</h2>
-            <AssessmentStats />
-          </div>
-
-          <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-foreground">Assessment History</h2>
-            <AssessmentTable />
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="bg-card p-6 rounded-lg border border-border">
-              <h3 className="text-lg font-semibold mb-4">Quick Actions</h3>
+          <Card className="bg-primary/5 border-primary/10">
+            <CardHeader>
+              <CardTitle className="text-primary flex items-center gap-2">
+                <Leaf className="h-5 w-5" />
+                SDG Impact
+              </CardTitle>
+              <CardDescription>
+                Your contribution to sustainable development
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
               <div className="space-y-4">
-                <Button className="w-full" asChild>
-                  <Link to="/employee">Browse Jobs</Link>
-                </Button>
-                <Button className="w-full" variant="outline" asChild>
-                  <Link to="/create-assessment">Generate AI Assessment</Link>
-                </Button>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium">Green Assessments Created</span>
+                  <Badge variant="outline" className="bg-primary/10">12</Badge>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium">Sustainable Skills Assessed</span>
+                  <Badge variant="outline" className="bg-primary/10">8</Badge>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium">Environmental Impact Score</span>
+                  <Badge variant="outline" className="bg-primary/10">High</Badge>
+                </div>
               </div>
-            </div>
-            
-            <div className="bg-card p-6 rounded-lg border border-border">
-              <h3 className="text-lg font-semibold mb-4">Recent Activity</h3>
-              <p className="text-muted-foreground">Track your recent assessment activities and progress.</p>
-            </div>
+            </CardContent>
+          </Card>
+        </div>
+        
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="space-y-6">
+            <AssessmentStats />
+            <RecentActivity />
           </div>
+          <AssessmentTable />
         </div>
       </main>
     </div>

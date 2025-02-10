@@ -53,7 +53,7 @@ export const EmployeeNavigation = () => {
               <span className="ml-2">Back</span>
             </Button>
             <Link to="/" className="text-2xl font-bold dark:text-[#F9F6EE] text-[#36454F]">
-              Testera
+              DevBus
             </Link>
           </div>
           
@@ -95,7 +95,7 @@ export const EmployeeNavigation = () => {
               </Button>
             )}
             <Link to="/" className="text-sm dark:text-[#F0EAD6] text-[#36454F] font-medium hover:opacity-80 transition-opacity">
-              Testera for Employers
+              DevBus for Employers
             </Link>
           </div>
         </div>
