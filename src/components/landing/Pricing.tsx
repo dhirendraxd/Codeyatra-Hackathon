@@ -23,7 +23,7 @@ const pricingPlans = [
   },
   {
     name: "Pro",
-    price: "29",
+    price: "499",
     description: "For serious job seekers who want to stand out",
     features: [
       "Unlimited assessments",
@@ -41,7 +41,7 @@ const pricingPlans = [
   },
   {
     name: "Enterprise",
-    price: "99",
+    price: "999",
     description: "For companies and professional recruiters",
     features: [
       "All Pro features",
@@ -92,7 +92,7 @@ export const Pricing = () => {
                   {plan.name}
                 </CardTitle>
                 <div className="flex items-baseline mt-4">
-                  <span className="text-4xl font-bold dark:text-[#F9F6EE] text-[#36454F]">${plan.price}</span>
+                  <span className="text-4xl font-bold dark:text-[#F9F6EE] text-[#36454F]">₹{plan.price}</span>
                   <span className="ml-2 text-muted-foreground">/month</span>
                 </div>
                 <p className="mt-4 text-sm dark:text-[#E2DFD2] text-[#36454F]">

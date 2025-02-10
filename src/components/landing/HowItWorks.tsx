@@ -15,15 +15,9 @@ const steps = [
     icon: Edit3,
     iconColor: "from-blue-400 to-purple-500",
   },
+ 
   {
     number: "3",
-    title: "Publish and Share the assessment",
-    description: "Share assessments links privately to candidates or post your job on Testera's public job board to let anyone apply",
-    icon: Share2,
-    iconColor: "from-teal-400 to-emerald-500",
-  },
-  {
-    number: "4",
     title: "Review Results",
     description: "Testera AI evaluates, scores, and provides details feedback on each question for every candidate responses so you can skip to reviewing the best candidates.",
     icon: BarChart3,
@@ -36,7 +30,7 @@ export const HowItWorks = () => {
     <section className="py-20 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-[#F9F6EE] text-[#36454F]">
-          Simple, 4 Step Process
+          Simple, 3 Step Process
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
