@@ -88,6 +88,9 @@ button:hover {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+.box:hover{
+  transform: scale(1.05);
+}
 
 .box h4 {
   color: #ff4d6d;
