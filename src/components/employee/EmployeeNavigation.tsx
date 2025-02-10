@@ -58,12 +58,12 @@ export const EmployeeNavigation = () => {
           </div>
           
           <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
-            <Link to="/jobs" className="dark:text-[#F0EAD6] text-[#36454F] font-medium hover:opacity-80 transition-opacity">
-              All Jobs
+            {/* <Link to="/jobs" className="dark:text-[#F0EAD6] text-[#36454F] font-medium hover:opacity-80 transition-opacity">
+              
             </Link>
             <Link to="/companies" className="dark:text-[#F0EAD6] text-[#36454F] font-medium hover:opacity-80 transition-opacity">
-              All Companies
-            </Link>
+
+            </Link> */}
           </div>
 
           <div className="flex items-center space-x-4">
