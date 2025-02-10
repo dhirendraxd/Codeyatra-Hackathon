@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
@@ -133,105 +132,61 @@ export const ActiveAssessments = () => {
       return;
     }
 
-    // Automatically create an AI-generated assessment for this job
-    const { data: existingAssessment, error: fetchError } = await supabase
-      .from('assessments')
+    // Check if user has already taken this assessment
+    const { data: existingResult, error: fetchError } = await supabase
+      .from('assessment_results')
       .select()
       .eq('user_id', session.user.id)
-      .eq('topic', assessment.title)
+      .eq('assessment_title', assessment.title)
       .eq('company_name', assessment.company)
       .maybeSingle();
 
     if (fetchError) {
       toast({
         title: "Error",
-        description: "Failed to check existing assessments",
+        description: "Failed to check assessment history",
         variant: "destructive",
       });
       return;
     }
 
-    if (existingAssessment) {
+    if (existingResult) {
       toast({
-        title: "Assessment Exists",
-        description: "You have already taken or started this assessment",
-      });
-      navigate("/create-assessment", {
-        state: { 
-          topic: assessment.title,
-          jobDetails: {
-            company: assessment.company,
-            location: assessment.location,
-            type: assessment.type,
-            workMode: assessment.workMode,
-            sustainability_focus: assessment.sustainability_focus,
-            promotes_diversity: assessment.promotes_diversity,
-            remote_work_type: assessment.remote_work_type,
-            green_job_category: assessment.green_job_category
-          }
-        }
+        title: "Assessment Already Taken",
+        description: "You have already completed this assessment.",
       });
       return;
     }
 
-    try {
-      const response = await supabase.functions.invoke('generate-assessment', {
-        body: { topic: assessment.title }
-      });
+    // Generate assessment questions if not already present
+    if (!assessment.questions) {
+      try {
+        const response = await supabase.functions.invoke('generate-assessment', {
+          body: { topic: assessment.title }
+        });
 
-      if (response.error) {
-        throw new Error(response.error.message);
+        if (response.error) {
+          throw new Error(response.error.message);
+        }
+
+        assessment.questions = response.data.questions;
+      } catch (error: any) {
+        toast({
+          title: "Error",
+          description: "Failed to generate assessment questions",
+          variant: "destructive",
+        });
+        return;
       }
-
-      const { questions } = response.data;
-
-      const { data: newAssessment, error: createError } = await supabase
-        .from('assessments')
-        .insert({
-          topic: assessment.title,
-          questions,
-          user_id: session.user.id,
-          company_name: assessment.company,
-          job_title: assessment.title,
-          assessment_type: "technical",
-          is_ai_generated: true,
-          remote_work_type: assessment.remote_work_type,
-          promotes_diversity: assessment.promotes_diversity,
-          green_job_category: assessment.green_job_category,
-          sustainability_focus: assessment.sustainability_focus,
-        })
-        .select()
-        .single();
-
-      if (createError) throw createError;
-
-      toast({
-        title: "Assessment Created",
-        description: "Your assessment has been generated. Good luck!",
-      });
-
-      navigate("/create-assessment", {
-        state: { 
-          topic: assessment.title,
-          jobDetails: {
-            company: assessment.company,
-            location: assessment.location,
-            type: assessment.type,
-            workMode: assessment.workMode,
-            sustainability_focus: assessment.sustainability_focus,
-            promotes_diversity: assessment.promotes_diversity,
-            remote_work_type: assessment.remote_work_type,
-            green_job_category: assessment.green_job_category
-          }
-        }
-      });
-    } catch (error: any) {
-      toast({
-        title: "Error",
-        description: error.message || "Failed to generate assessment",
-        variant: "destructive",
-      });
     }
+
+    // Navigate to the assessment page with all necessary data
+    navigate("/take-assessment", {
+      state: {
+        ...assessment,
+        questions: assessment.questions
+      }
+    });
   };
 
   return (

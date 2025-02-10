@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { ArrowRight, ArrowLeft } from "lucide-react";
@@ -36,6 +36,72 @@ const CreateAssessment = () => {
   const [score, setScore] = useState(0);
   const { toast } = useToast();
   const navigate = useNavigate();
+
+  const staticQuestions = [
+    {
+      question: "Which of the following is a key responsibility in waste management within aluminum production?",
+      options: [
+        "Maximizing waste generation to increase production speed",
+        "Implementing scrap metal recycling and recovery systems",
+        "Ignoring waste byproducts to focus on main production",
+        "Storing all waste materials indefinitely"
+      ],
+      correctAnswer: 1,
+      explanation: "In aluminum production, implementing scrap metal recycling and recovery systems is crucial for waste management and sustainability."
+    },
+    {
+      question: "What is a critical aspect of quality control in aluminum flat rolled products?",
+      options: [
+        "Only checking the final product",
+        "Visual inspection without measurements",
+        "Continuous monitoring of thickness, flatness, and surface quality",
+        "Relying solely on customer feedback"
+      ],
+      correctAnswer: 2,
+      explanation: "Continuous monitoring of thickness, flatness, and surface quality is essential for maintaining product standards in aluminum production."
+    },
+    {
+      question: "In the context of circular economy, what is the best approach to handling aluminum production byproducts?",
+      options: [
+        "Dispose of all byproducts immediately",
+        "Store byproducts indefinitely",
+        "Reintegrate byproducts into the production cycle when possible",
+        "Sell all byproducts at a discount"
+      ],
+      correctAnswer: 2,
+      explanation: "Circular economy principles emphasize reintegrating byproducts into the production cycle to minimize waste and maximize resource efficiency."
+    },
+    {
+      question: "Which team coordination practice is most effective in a production environment?",
+      options: [
+        "Working independently without communication",
+        "Regular shift handover meetings and clear communication channels",
+        "Informal verbal updates only",
+        "Annual team meetings"
+      ],
+      correctAnswer: 1,
+      explanation: "Regular shift handover meetings and clear communication channels ensure smooth operations and maintain production standards."
+    },
+    {
+      question: "What is a key principle of production management in an aluminum factory?",
+      options: [
+        "Focusing only on output quantity",
+        "Maintaining a balance between quality, efficiency, and safety",
+        "Minimizing all costs regardless of impact",
+        "Maximizing worker overtime"
+      ],
+      correctAnswer: 1,
+      explanation: "Effective production management requires balancing quality, efficiency, and safety to ensure sustainable operations."
+    }
+  ];
+
+  useEffect(() => {
+    // Set static questions when component mounts
+    if (state?.topic === "Junior Production Manager") {
+      setQuestions(staticQuestions);
+      setCurrentAnswers(new Array(staticQuestions.length).fill(-1));
+    }
+  }, [state]);
 
   const handleAnswerSelect = (questionIndex: number, answerIndex: number) => {
     const newAnswers = [...currentAnswers];
