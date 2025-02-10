@@ -49,13 +49,13 @@ const JobSeekerFeatures = [
 
 export const Solution = () => {
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section className="py-24 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 dark:text-[#F9F6EE] text-[#36454F]">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 dark:text-[#F9F6EE] text-[#36454F]">
             Introducing Testera —The Future of Job Matching
           </h2>
-          <p className="text-xl dark:text-[#E2DFD2] text-[#36454F] max-w-3xl mx-auto">
+          <p className="text-xl dark:text-[#E2DFD2] text-[#36454F] max-w-2xl mx-auto">
             At Testera, we make hiring smarter, faster, and more transparent. Our
             platform connects job seekers with employers through AI-driven tests
             designed to assess real-world skills.

@@ -40,13 +40,13 @@ const jobSeekerBenefits = [
 
 export const Benefits = () => {
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section className="py-24 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 dark:text-[#F9F6EE] text-[#36454F]">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-20 dark:text-[#F9F6EE] text-[#36454F]">
           Benefits
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-20">
           <div>
             <h3 className="text-2xl font-bold mb-8 dark:text-[#F0EAD6] text-[#36454F]">For Employers</h3>
             <div className="space-y-8">
