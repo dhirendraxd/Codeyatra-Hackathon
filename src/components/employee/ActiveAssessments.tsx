@@ -7,8 +7,8 @@ import { AssessmentHeader } from "./AssessmentHeader";
 const assessments = [
   {
     title: "Junior Production Manager",
-    company: "Test2",
-    location: "[City Name]",
+    company: "Hitesh Dosss",
+    location: "VeloCity",
     type: "Full time",
     workMode: "Fully On-site",
     tags: ["Production management", "Quality control", "Team coordination"],
@@ -27,7 +27,7 @@ const assessments = [
     workMode: "Remote",
     tags: ["Renewable Energy", "Solar Systems", "Green Technology"],
     description: "Join our team as a Renewable Energy Systems Engineer and help design the sustainable energy solutions of tomorrow. You'll work on cutting-edge solar and wind energy projects while contributing to a greener future...",
-    isNew: true,
+    isNew: false,
     sustainability_focus: ["renewable_energy", "green_technology"],
     promotes_diversity: true,
     remote_work_type: "remote",
@@ -95,7 +95,7 @@ const assessments = [
   },
   {
     title: "Product Manager",
-    company: "Test2",
+    company: "Moto SDG",
     location: "Kolkata, India",
     type: "Full time",
     workMode: "Remote",
