@@ -31,7 +31,7 @@ export const Hero = () => {
         <div className="flex flex-col items-center gap-8">
           <div className="text-shadow-lg max-w-4xl">
             <img 
-              src="/lovable-uploads/d65dd7d2-7249-4d0b-92f1-01d6c26d28b4.png" 
+              src="/public/favi-uploads/d65dd7d2-7249-4d0b-92f1-01d6c26d28b4.png" 
               alt="Testera Logo" 
               className="w-32 h-32 mx-auto mb-8 animate-glow rounded-xl"
             />
