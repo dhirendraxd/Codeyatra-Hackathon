@@ -209,7 +209,7 @@ export const CreateEmployerAssessment = () => {
                           Job Title
                         </FormLabel>
                         <FormControl>
-                          <Input placeholder="e.g., Senior React Developer" {...field} />
+                          <Input placeholder="e.g., ANY SDG JOBS" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -293,7 +293,7 @@ export const CreateEmployerAssessment = () => {
                         </FormLabel>
                         <FormControl>
                           <Input 
-                            placeholder="e.g., React, TypeScript, Node.js, AWS" 
+                            placeholder="e.g.,Microsoft Excel, Google Cloud" 
                             {...field} 
                           />
                         </FormControl>

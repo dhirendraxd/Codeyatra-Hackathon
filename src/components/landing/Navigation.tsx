@@ -79,7 +79,7 @@ export const Navigation = () => {
               </Button>
             )}
             <Link to="/" className="text-2xl font-bold dark:text-[#F9F6EE] text-[#36454F]">
-              Testera
+              DevBus
             </Link>
           </div>
 
@@ -113,7 +113,7 @@ export const Navigation = () => {
             )}
             <Button variant="ghost" asChild>
               <Link to="/employee" className="dark:text-[#F0EAD6] text-[#36454F] hover:opacity-80">
-                Testera for Employees
+                DevBus for Employees
               </Link>
             </Button>
           </div>

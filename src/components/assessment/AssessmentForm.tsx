@@ -143,7 +143,7 @@ export const AssessmentForm = ({
             <FormItem>
               <FormLabel>Job Title</FormLabel>
               <FormControl>
-                <Input placeholder="e.g., Senior React Developer" {...field} />
+                <Input placeholder="e.g., ANY SDG JOBS" {...field} />
               </FormControl>
             </FormItem>
           )}
@@ -157,7 +157,7 @@ export const AssessmentForm = ({
               <FormLabel>Assessment Topic</FormLabel>
               <FormControl>
                 <Input
-                  placeholder="e.g., React and TypeScript Technical Assessment"
+                  placeholder="e.g., Documentation"
                   {...field}
                   disabled={isTopicLocked}
                 />
