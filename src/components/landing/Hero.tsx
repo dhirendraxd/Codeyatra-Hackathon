@@ -54,15 +54,17 @@ export const Hero = () => {
             <h1 className="text-3xl md:text-5xl font-bold mb-6 drop-shadow-lg dark:text-[#F9F6EE] text-[#36454F]">
               Create and Evaluate Job Assessments using AI
             </h1>
-            <h2 className="text-xl md:text-2xl mb-6 drop-shadow-lg dark:text-[#F0EAD6] text-[#36454F]">
+            {/* <h2 className="text-xl md:text-2xl mb-6 drop-shadow-lg dark:text-[#F0EAD6] text-[#36454F]">
               Tell us who you want to hire
-            </h2>
+            </h2> */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto mb-8">
+              
               <Button 
                 size="lg" 
                 className="bg-[#006BFF] hover:bg-[#0055CC] text-white font-semibold shadow-lg whitespace-nowrap h-12"
                 onClick={handleCreateAssessment}
               >
+               
                 Give Assessment
               </Button>
               <Button 
