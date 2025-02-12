@@ -57,7 +57,7 @@ Hiring the right talent is challenging, especially for SMEs and startups that la
 - Expansion into international markets.
 
 ## 📂 Repository
-[GitHub - DevBus](#) **
+[https://github.com/dhirendraxd/Codeyatra-Hackathon.git]
 
 ## 🤝 Contributors
 - **Dhirendra** - Project Lead
