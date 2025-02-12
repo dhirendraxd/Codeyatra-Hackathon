@@ -36,7 +36,7 @@ We operate on a **subscription-based SaaS model**:
 - **Hosting**:  Vercel
 
 ## 📂 Repository
-[GitHub Repo](#) (Make sure to update with a public repo link)
+[GitHub Repo](#) (https://github.com/dhirendraxd/Codeyatra-Hackathon.git)
 
 ## 🔮 Future Plans
 - AI-powered interview simulations
