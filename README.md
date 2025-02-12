@@ -1,69 +1,50 @@
-# Welcome to your Lovable project
+# Testera AI - AI-Powered Job Assessments
 
-## Project info
+## 🚀 Overview
+Testera AI is an AI-powered job assessment platform designed to streamline the hiring process for companies while helping job seekers improve their skills. Our platform generates AI-driven job descriptions and customized assessments to evaluate candidates effectively.
 
-**URL**: https://lovable.dev/projects/c05dd98f-51db-4a42-837c-b09780f59fd0
+## 🛠 Features
+- **AI-Generated Job Descriptions & Assessments**: Automatically create job-specific tests tailored to industry needs.
+- **Customizable Questions**: Employers can add, remove, or edit questions (MCQ, video, audio, and descriptive formats).
+- **Automated Evaluation & Feedback**: AI analyzes responses, scores candidates, and provides insights to recruiters.
+- **Public & Private Job Listings**: Share assessments privately or post them on our job board.
+- **Scalable SaaS Model**: Suitable for SMEs, recruiters, and enterprises with subscription-based pricing.
 
-## How can I edit this code?
+## 🎯 Problem Statement
+Hiring is **time-consuming, biased, and inefficient**, especially for SMEs with limited HR resources. Job seekers also struggle to showcase skills beyond a traditional resume. **Testera AI** solves this by offering structured, automated, and data-driven hiring solutions.
 
-There are several ways of editing your application.
+## ✅ How It Works
+1. **Create Job Description & Assessment**: AI generates a job-specific test.
+2. **Customize Questions**: Employers can modify test content.
+3. **Publish & Share**: Send private links or post publicly.
+4. **Review Results**: AI evaluates and ranks candidates.
 
-**Use Lovable**
+## 💰 Business Model
+We operate on a **subscription-based SaaS model**:
+- **Free Plan**: Basic job applications & limited assessments.
+- **Pro Plan ($29/month)**: Unlimited assessments, advanced analytics.
+- **Enterprise Plan ($99/month)**: Bulk invites, team collaboration, API access.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c05dd98f-51db-4a42-837c-b09780f59fd0) and start prompting.
+## 📈 Market Opportunity
+- **Nepal Market**: 500,000+ job seekers annually, SMEs making up **99%** of businesses.
+- **Global AI Recruitment Market**: Expected to reach **$942.3 million by 2028**.
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🔧 Tech Stack
+- **Frontend**: React.js , Tailwind
+- **Backend**: SupaBase
+- **AI/ML**: OpenAI models for assessment evaluation
+- **Hosting**:  Vercel
 
-**Use your preferred IDE**
+## 📂 Repository
+[GitHub Repo](#) (Make sure to update with a public repo link)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🔮 Future Plans
+- AI-powered interview simulations
+- Skill-based learning recommendations
+- Integration with HR tools (API support)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📞 Contact
+For queries or collaboration, reach out at **contact@testera.ai** or connect via [LinkedIn](#).
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c05dd98f-51db-4a42-837c-b09780f59fd0) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+---
+**Empowering SMEs and job seekers with AI-driven hiring!**
