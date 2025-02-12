@@ -1,50 +1,69 @@
-# Testera AI - AI-Powered Job Assessments
+# DevBus - AI-Powered Job Assessment Platform
 
-## 🚀 Overview
-Testera AI is an AI-powered job assessment platform designed to streamline the hiring process for companies while helping job seekers improve their skills. Our platform generates AI-driven job descriptions and customized assessments to evaluate candidates effectively.
+## 📌 Project Overview
+DevBus is an AI-powered platform that helps businesses streamline their hiring process by creating and evaluating job assessments. It enables employers to generate job-specific tests, assess candidates effectively, and make data-driven hiring decisions.
 
-## 🛠 Features
-- **AI-Generated Job Descriptions & Assessments**: Automatically create job-specific tests tailored to industry needs.
-- **Customizable Questions**: Employers can add, remove, or edit questions (MCQ, video, audio, and descriptive formats).
-- **Automated Evaluation & Feedback**: AI analyzes responses, scores candidates, and provides insights to recruiters.
-- **Public & Private Job Listings**: Share assessments privately or post them on our job board.
-- **Scalable SaaS Model**: Suitable for SMEs, recruiters, and enterprises with subscription-based pricing.
+## 🚀 Problem Statement
+Hiring the right talent is challenging, especially for SMEs and startups that lack the resources for a dedicated HR team. Traditional hiring processes are time-consuming, biased, and often fail to assess both technical and soft skills accurately.
 
-## 🎯 Problem Statement
-Hiring is **time-consuming, biased, and inefficient**, especially for SMEs with limited HR resources. Job seekers also struggle to showcase skills beyond a traditional resume. **Testera AI** solves this by offering structured, automated, and data-driven hiring solutions.
+### Key Challenges:
+- **Time-consuming hiring process**: Screening and evaluating candidates manually takes significant effort.
+- **Lack of skill-based evaluation**: Traditional resumes don't always reflect actual candidate skills.
+- **Bias in hiring**: Subjective judgments can lead to unfair hiring decisions.
+- **Limited access to quality talent**: SMEs struggle to compete with large corporations in attracting skilled professionals.
 
-## ✅ How It Works
-1. **Create Job Description & Assessment**: AI generates a job-specific test.
-2. **Customize Questions**: Employers can modify test content.
-3. **Publish & Share**: Send private links or post publicly.
-4. **Review Results**: AI evaluates and ranks candidates.
+## ✅ Solution - How DevBus Works
+1. **AI-Generated Job Descriptions & Assessments**: DevBus uses AI to create customized assessments tailored to job roles.
+2. **Customizable Question Formats**: Employers can add video, audio, MCQs, and descriptive questions.
+3. **Seamless Candidate Evaluation**: AI automatically scores responses and provides feedback.
+4. **Data-Driven Hiring Decisions**: Employers can filter and shortlist candidates based on performance insights.
+
+## 🔥 Key Features
+- AI-generated job descriptions and assessments.
+- Multiple question formats (MCQ, video, audio, descriptive, etc.).
+- Automated candidate scoring and feedback.
+- Public job board and private assessment sharing.
+- Analytics dashboard for in-depth candidate evaluation.
+- Custom branding and API access for enterprises.
+
+## 🎯 Target Audience
+- **SMEs & Startups**: Cost-effective and efficient hiring solution.
+- **Recruitment Agencies**: Data-driven approach to candidate evaluation.
+- **Enterprises**: Bulk hiring and custom integrations with HR systems.
+- **Job Seekers**: Skill-based assessments to improve job prospects.
 
 ## 💰 Business Model
-We operate on a **subscription-based SaaS model**:
-- **Free Plan**: Basic job applications & limited assessments.
-- **Pro Plan ($29/month)**: Unlimited assessments, advanced analytics.
-- **Enterprise Plan ($99/month)**: Bulk invites, team collaboration, API access.
+- **Free Plan**: Basic access to public job listings and assessments.
+- **Pro Plan ($29/month)**: Unlimited assessments, AI-powered feedback, and interview preparation.
+- **Enterprise Plan ($99/month)**: Custom branding, bulk invitations, API access, and advanced analytics.
 
-## 📈 Market Opportunity
-- **Nepal Market**: 500,000+ job seekers annually, SMEs making up **99%** of businesses.
-- **Global AI Recruitment Market**: Expected to reach **$942.3 million by 2028**.
+## 📊 Market Opportunity
+- The global HR tech market is projected to reach **$35 billion by 2028**.
+- Nepal's job market is growing, with **over 500,000 new job seekers annually**.
+- SMEs in Nepal struggle with recruitment, making AI-powered hiring solutions a high-demand service.
 
-## 🔧 Tech Stack
-- **Frontend**: React.js , Tailwind
-- **Backend**: SupaBase
-- **AI/ML**: OpenAI models for assessment evaluation
-- **Hosting**:  Vercel
+## 🛠️ Tech Stack
+- **Frontend**: React, Tailwind CSS
+- **Backend**: Supabase
+- **Database**: PostgreSQL 
+- **AI Integration**: OpenAI / GPT-based models
+- **Hosting**: Vercel 
+
+## 🔮 Future Roadmap
+- Integration with LinkedIn & job portals.
+- AI-powered resume screening and matching.
+- Automated video interview analysis.
+- Multi-language support for diverse hiring needs.
+- Expansion into international markets.
 
 ## 📂 Repository
-[GitHub Repo](#) (https://github.com/dhirendraxd/Codeyatra-Hackathon.git)
+[GitHub - DevBus](#) **
 
-## 🔮 Future Plans
-- AI-powered interview simulations
-- Skill-based learning recommendations
-- Integration with HR tools (API support)
+## 🤝 Contributors
+- **Dhirendra** - Project Lead
+- **Dhirendra** -  Backend
+- **Hitesh & Aryan** - UI/UX & Frontend
 
-## 📞 Contact
-For queries or collaboration, reach out at **contact@testera.ai** or connect via [LinkedIn](#).
+## 📩 Contact
+For inquiries, reach out at **contact@devbus.com** or visit [DevBus Website](#).
 
----
-**Empowering SMEs and job seekers with AI-driven hiring!**
