@@ -49,7 +49,7 @@ export const Hero = () => {
             <img 
               src="/uploads/d65dd7d2-7249-4d0b-92f1-01d6c26d28b4.png" 
               alt="Testera Logo" 
-              className="w-32 h-32 mx-auto mb-8 animate-glow rounded-xl"
+              className="w-32 h-32 mx-auto mb-8 rounded-xl"
             />
             <h1 className="text-3xl md:text-5xl font-bold mb-6 drop-shadow-lg dark:text-[#F9F6EE] text-[#36454F]">
               Create and Evaluate Job Assessments using AI
