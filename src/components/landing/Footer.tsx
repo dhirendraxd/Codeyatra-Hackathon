@@ -6,10 +6,10 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="space-y-4">
-            <h3 className="font-bold text-xl">DevBus</h3>
-            <p className="text-BusDev-zircon">
-              Empowering tech talent assessment worldwide
+          <div>
+            <h3 className="font-bold text-xl">Testera</h3>
+            <p className="mt-4 text-sm dark:text-[#E2DFD2] text-[#36454F]">
+              AI-powered job assessment platform for smarter hiring.
             </p>
           </div>
 
@@ -48,8 +48,8 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-testera-firefly text-center text-testera-zircon">
-          <p>&copy; {new Date().getFullYear()} DevBus. All rights reserved.</p>
+        <div className="border-t border-gray-200 dark:border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p>&copy; {new Date().getFullYear()} Testera. All rights reserved.</p>
         </div>
       </div>
     </footer>

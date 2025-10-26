@@ -1,7 +1,7 @@
-# DevBus - AI-Powered Job Assessment Platform
+# Testera - AI-Powered Job Assessment Platform
 
 ## 📌 Project Overview
-DevBus is an AI-powered platform that helps businesses streamline their hiring process by creating and evaluating job assessments. It enables employers to generate job-specific tests, assess candidates effectively, and make data-driven hiring decisions.
+Testera is an AI-powered platform that helps businesses streamline their hiring process by creating and evaluating job assessments. It enables employers to generate job-specific tests, assess candidates effectively, and make data-driven hiring decisions.
 
 ## 🚀 Problem Statement
 Hiring the right talent is challenging, especially for SMEs and startups that lack the resources for a dedicated HR team. Traditional hiring processes are time-consuming, biased, and often fail to assess both technical and soft skills accurately.
@@ -12,8 +12,8 @@ Hiring the right talent is challenging, especially for SMEs and startups that la
 - **Bias in hiring**: Subjective judgments can lead to unfair hiring decisions.
 - **Limited access to quality talent**: SMEs struggle to compete with large corporations in attracting skilled professionals.
 
-## ✅ Solution - How DevBus Works
-1. **AI-Generated Job Descriptions & Assessments**: DevBus uses AI to create customized assessments tailored to job roles.
+## ✅ Solution - How Testera Works
+1. **AI-Generated Job Descriptions & Assessments**: Testera uses AI to create customized assessments tailored to job roles.
 2. **Customizable Question Formats**: Employers can add video, audio, MCQs, and descriptive questions.
 3. **Seamless Candidate Evaluation**: AI automatically scores responses and provides feedback.
 4. **Data-Driven Hiring Decisions**: Employers can filter and shortlist candidates based on performance insights.
@@ -65,5 +65,5 @@ Hiring the right talent is challenging, especially for SMEs and startups that la
 - **Hitesh & Aryan** - UI/UX & Frontend
 
 ## 📩 Contact
-For inquiries, reach out at **contact@devbus.com** or visit [DevBus Website](#).
+For inquiries, reach out at **contact@testera.com** or visit [Testera Website](#).
 

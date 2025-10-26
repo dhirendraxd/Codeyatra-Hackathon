@@ -5,7 +5,7 @@ const EmployerFeatures = [
   {
     title: "AI-Powered Job Creation",
     description: "Publish job listings in seconds with AI assistance that generates job descriptions tailored to real-world job requirements.",
-    image: "/lovable-uploads/f912ad5b-2bc6-45ae-a770-d0e04e518779.png"
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
   },
   {
     title: "Customizable Assessments",

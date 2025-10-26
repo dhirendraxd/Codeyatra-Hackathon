@@ -6,12 +6,6 @@ export const EmployeeHero = () => {
   return (
     <div className="min-h-[40vh] flex flex-col items-center justify-center text-center px-4 pt-24">
       <div className="max-w-4xl mx-auto w-full">
-        <img 
-          src="/lovable-uploads/d65dd7d2-7249-4d0b-92f1-01d6c26d28b4.png" 
-          alt="Testera Logo" 
-          className="w-32 h-32 mx-auto mb-8 animate-glow rounded-xl"
-        />
-        
         <h1 className="text-4xl md:text-5xl font-bold mb-8 dark:text-[#F9F6EE] text-[#36454F]">
           Give assessments and get hired fast
         </h1>
